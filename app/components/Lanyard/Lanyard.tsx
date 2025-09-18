@@ -243,6 +243,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
             map={texture}
             repeat={[-4, 1]}
             lineWidth={1}
+        {/*    */}
         />
       </mesh>
     </>
