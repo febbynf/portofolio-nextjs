@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Lanyard from "./components/Lanyard/Lanyard";
 import RotatingText from "./components/RotatingText/RotatingText";
+import SplitText from "./components/SplitText/SplitText";
 
 export default function Home() {
   return (
@@ -22,6 +23,19 @@ export default function Home() {
                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
                            rotationInterval={2000}/>
+                   </div>
+                   <div>
+                       <SplitText
+                           text="Coding by dgitay, Creating by passion"
+                           className="text-2xl font-semibold text-center text-white"
+                           // delay={100}
+                           // duration={0.6}
+                           // splitType="chars"
+                           // from={{ opacity: 0, y: 40 }}
+                           // to={{ opacity: 1, y: 0 }}
+                           // threshold={0.1}
+                           rootMargin="-100px"
+                           textAlign="center" />
                    </div>
                </div>
                <div className="col-span-6">
