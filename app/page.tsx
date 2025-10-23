@@ -6,10 +6,12 @@ import BlurText from "./components/BlurText/BlurText";
 import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import Galaxy from "./components/Galaxy/Galaxy";
 import Particles from "./components/Particles/Particles";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
    <div className = "min-h-screen overflow-x-hidden bg-black">
+
        <div className="absolute top-0 left-0 w-full h-full right-0 bottom-0">
            <Particles
                particleColors={['#ffffff', '#ffffff']}
@@ -23,14 +25,18 @@ export default function Home() {
            >
            </Particles>
        </div>
+
        <div className="container mx-auto h-screen">
+           <NavBar>
+
+           </NavBar>
            <div className="grid grid-cols-12">
                <div className="col-span-6">
                    <div className="flex items-center h-full">
                        <div className="flex flex-col gap-6">
                            <AnimatedContent>
                                <div className="flex items-center gap-2">
-                                   <h1 className="text-4xl text-white font-bold">Hello, I'm</h1>
+                                   <h1 className="text-4xl text-white font-bold">I'm</h1>
                                    <RotatingText
                                        texts={['Web Developer', 'Web Design', 'Backend Dev', 'Fullstack Dev']}
                                        mainClassName="px-2 sm:px-2 md:px-3 bg-[#E87779] text-black overflow-hidden py-0.5 sm:py-1
@@ -48,8 +54,8 @@ export default function Home() {
                            </AnimatedContent>
                            <div className="flex flex-col items-start">
                                <SplitText
-                                   text="I'am Febby Nurfitriyani"
-                                   className="text-6xl font-semibold text-start text-white"
+                                   text="Hi! I'm Febby"
+                                   className="text-6xl font-semibold text-start text-[#ffffff]"
                                    delay={100}
                                    duration={0.6}
                                    splitType="chars"
