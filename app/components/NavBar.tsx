@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useEffect, ReactNode } from 'react';
+import React, { useRef, useEffect, useState, ReactNode } from 'react';
 
 const navLinks = [
     {
@@ -21,6 +21,18 @@ const navLinks = [
 ];
 
 const NavBar = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 10;
+            setScrolled(true);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <header className="fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out">
             <div className="mx-auto flex items-center justify-between">

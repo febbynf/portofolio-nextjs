@@ -4,9 +4,9 @@ import RotatingText from "./components/RotatingText/RotatingText";
 import SplitText from "./components/SplitText/SplitText";
 import BlurText from "./components/BlurText/BlurText";
 import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
-import Galaxy from "./components/Galaxy/Galaxy";
 import Particles from "./components/Particles/Particles";
 import NavBar from "./components/NavBar";
+import AnimatedCounter from "./components/AnimatedCounter";
 
 export default function Home() {
   return (
@@ -27,9 +27,7 @@ export default function Home() {
        </div>
 
        <div className="container mx-auto h-screen">
-           <NavBar>
-
-           </NavBar>
+           <NavBar />
            <div className="grid grid-cols-12">
                <div className="col-span-6">
                    <div className="flex items-center h-full">
@@ -88,6 +86,7 @@ export default function Home() {
                    <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]}/>
                </div>
            </div>
+           <AnimatedCounter />
        </div>
    </div>
   );
